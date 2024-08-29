@@ -59,4 +59,8 @@ export function renderPaymentSummary(){
           </button>`;
 
     document.querySelector('.js-payment-summary').innerHTML=paymentSummaryHTML;
+
+    document.querySelector('.js-checkout-header-middle-section').innerHTML=`
+    Checkout (<a class="return-to-home-link"
+            href="amazon.html">${ItemInCart} items</a>)`;
 }
