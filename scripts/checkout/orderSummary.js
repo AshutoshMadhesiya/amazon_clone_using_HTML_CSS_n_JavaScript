@@ -95,7 +95,7 @@ export function renderOrderSummary(){
         return HTML;
     }
 
-
+    
     document.querySelector('.js-order-summary').innerHTML=cartSummaryHTML;
 
     document.querySelectorAll('.js-delete-link')
