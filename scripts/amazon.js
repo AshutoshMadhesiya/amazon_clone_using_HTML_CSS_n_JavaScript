@@ -59,6 +59,21 @@ products.forEach((product) => {
         </div>`
     ;
 });
+let cartQuantity=0;
+cart.forEach((item) =>{
+  cartQuantity++;
+});
+
+if(cartQuantity==0)
+{
+  document.querySelector('.js-cart-quantity').innerHTML="";
+}
+else
+{
+  document.querySelector('.js-cart-quantity').innerHTML=cartQuantity;
+}
+
+
 
 function updateCartCount(){
   let cartQuantity = 0;
