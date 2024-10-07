@@ -61,7 +61,7 @@ products.forEach((product) => {
 });
 let cartQuantity=0;
 cart.forEach((item) =>{
-  cartQuantity++;
+  cartQuantity+=item.quantity;;
 });
 
 if(cartQuantity==0)
