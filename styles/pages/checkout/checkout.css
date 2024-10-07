@@ -233,3 +233,20 @@
 .is-quantity-visible{
   display: none;
 }
+
+.view-product-button{
+  padding: 8px 15px;
+  width: 130px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 10px;
+}
+.empty-cart-message{
+  font-size: 18px;
+  margin: 15px;
+  margin-left: 0px;
+}
+
+.is-empty-cart-message-visible{
+  display: none;
+}

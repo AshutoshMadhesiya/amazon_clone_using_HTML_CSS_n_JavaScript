@@ -62,6 +62,13 @@ export function renderOrderSummary(){
         </div>`;
 
     });
+    if(cart.length === 0){
+        cartSummaryHTML=
+        `<div class="empty-cart-message js-empty-cart-message">Your cart is empty.</div>
+        <div><a href="amazon.html" class="view-product-button button-primary js-view-product-button">View Products</a></div>`;
+    }
+
+    console.log(cartSummaryHTML);
 
     function deliveryOptionsHTML(productId,cartItem) {
 
@@ -108,10 +115,10 @@ export function renderOrderSummary(){
 
             const container = document.querySelector(`.js-cart-item-container-${productId}`);
             container.remove();
-
+            renderOrderSummary();
             renderPaymentSummary();
-
         });
+        
     });
 
     document.querySelectorAll('.js-save-link').forEach((element) =>{
