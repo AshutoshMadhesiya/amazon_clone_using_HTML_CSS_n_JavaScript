@@ -17,6 +17,18 @@ function saveToStorage(){
   localStorage.setItem('cart',JSON.stringify(cart));
 }
 
+export function updateProductQuantity(productId,itemQuantity){
+  if(itemQuantity>=1&&itemQuantity<=100)
+  {
+    cart.forEach((item) =>{
+      if(item.productId===productId){
+        item.quantity=Number(itemQuantity);
+      }
+    });
+    saveToStorage();
+  }
+}
+
 export function addToCart(productId,quantityToAdd){
     let flag=true;
       cart.forEach((item) =>{
